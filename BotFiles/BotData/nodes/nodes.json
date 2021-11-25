@@ -1,0 +1,304 @@
+{
+  "nodes": [
+    {
+      "type": "command",
+      "name": "help",
+      "guid": "7942fe4c-dffa-4146-8cab-d254b3d80d5d",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "37eda463-a170-44f9-af54-61378ffc9294"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 148,
+      "y": 188
+    },
+    {
+      "type": "command",
+      "name": "info",
+      "guid": "2224944a-561a-4fa1-824b-2f31ea37c836",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "5053a44d-4a5e-460a-974d-da0cc07aac7c"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 149,
+      "y": 325
+    },
+    {
+      "type": "response",
+      "name": "help menu",
+      "guid": "37eda463-a170-44f9-af54-61378ffc9294",
+      "reactionFields": [],
+      "embedfields": [
+        {
+          "name": "!help",
+          "value": "Shows this menu",
+          "inline": "true"
+        },
+        {
+          "name": "!info",
+          "value": "Shows some info",
+          "inline": "true"
+        }
+      ],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "7942fe4c-dffa-4146-8cab-d254b3d80d5d"
+        }
+      ],
+      "x": 345,
+      "y": 182,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "1FFF57",
+        "Help Menu",
+        "",
+        "Bot Name Here",
+        "",
+        "",
+        "This is the embed description, replace this with some info about your bot!",
+        "",
+        "",
+        "",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": []
+    },
+    {
+      "type": "response",
+      "name": "show info",
+      "guid": "5053a44d-4a5e-460a-974d-da0cc07aac7c",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "2224944a-561a-4fa1-824b-2f31ea37c836"
+        }
+      ],
+      "x": 360,
+      "y": 324,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.DefaultChannel.id}",
+        "Command Author: ${dbsVars.CommandAuthor.displayName}\nTagged author: <@${dbsVars.CommandAuthor.id}>\nYou can insert more values by clicking the \"Insert Variable\" button next to this field!",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": []
+    },
+    {
+      "type": "command",
+      "name": "ankauf-holz",
+      "guid": "1391da99-1b0a-4fff-a151-1c83ee55c5da",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "d06f7153-b79a-46a0-819d-06c55b5cdf59"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 748,
+      "y": 259
+    },
+    {
+      "type": "response",
+      "name": "ankauf-channel",
+      "guid": "d06f7153-b79a-46a0-819d-06c55b5cdf59",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "1391da99-1b0a-4fff-a151-1c83ee55c5da"
+        }
+      ],
+      "x": 1029,
+      "y": 243,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "913468109757747260",
+        "<@${dbsVars.CommandAuthor.id}> möchte Holz kaufen.",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "ankauf-channel_1",
+      "guid": "925f656c-899b-46fb-8870-60ad964cb2cf",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "22d371b3-25c0-4085-90ef-30b7ee019651"
+        }
+      ],
+      "x": 1046,
+      "y": 408,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "913487005084680203",
+        "<@${dbsVars.CommandAuthor.id}> möchte Quarz kaufen.",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "command",
+      "name": "ankauf-quarz",
+      "guid": "22d371b3-25c0-4085-90ef-30b7ee019651",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "925f656c-899b-46fb-8870-60ad964cb2cf"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 756,
+      "y": 420
+    },
+    {
+      "type": "command",
+      "name": "ankauf-smaragd",
+      "guid": "d092efcf-a112-4f51-b9a2-9e34862bf868",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "3e0ce478-c917-4a38-89d8-f42f8c3d2433"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 753,
+      "y": 608
+    },
+    {
+      "type": "response",
+      "name": "ankauf-channel_1_1",
+      "guid": "3e0ce478-c917-4a38-89d8-f42f8c3d2433",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "d092efcf-a112-4f51-b9a2-9e34862bf868"
+        }
+      ],
+      "x": 1058,
+      "y": 601,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "913487049015836703",
+        "<@${dbsVars.CommandAuthor.id}> möchte Smaragde kaufen.",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    }
+  ]
+}
